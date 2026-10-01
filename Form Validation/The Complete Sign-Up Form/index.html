@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="signupForm">
+      <input id="fullName" placeholder="Full name" />
+      <input id="email" placeholder="Email" />
+      <input id="age" placeholder="Age" />
+      <div class="password-wrapper">
+        <input id="password" type="password" placeholder="Password" />
+        <button type="button" id="togglePassword">👁️</button>
+      </div>
+
+      <div class="password-wrapper">
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm password"
+        />
+        <button type="button" id="toggleConfirmPassword">👁️</button>
+      </div>
+      <p id="matchMsg"></p>
+      <label><input id="terms" type="checkbox" /> I agree to the terms</label>
+      <button type="submit">Create account</button>
+    </form>
+    <p id="signupMsg"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
