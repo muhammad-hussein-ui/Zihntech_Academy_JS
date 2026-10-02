@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#loginForm {
+  background: #ffffff;
+  width: 100%;
+  max-width: 360px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#loginForm input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d5d9df;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#loginForm input:focus {
+  outline: none;
+  border-color: #4a7fe8;
+  box-shadow: 0 0 0 3px rgba(74, 127, 232, 0.15);
+}
+
+#loginForm button {
+  background: #4a7fe8;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#loginForm button:hover {
+  background: #3a6bd0;
+}
+
+#loginMsg {
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.8rem;
+}
+
+#loginForm #toggleLoginPassword {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: black;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+#loginForm #toggleLoginPassword.revealed {
+  opacity: 1;
+}
+
+#loginForm #toggleLoginPassword.revealed::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  height: 2px;
+  background: black;
+  transform: translateY(-50%) rotate(-45deg);
+}
